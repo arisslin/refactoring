@@ -1,0 +1,17 @@
+{
+  "name": "refactoring",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "author": "Andreas Rissling",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-angular": "^19.7.1",
+    "husky": "^9.1.7"
+  },
+  "type": "module"
+}
