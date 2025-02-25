@@ -1,5 +1,21 @@
 {
   "compilerOptions": {
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "moduleDetection": "force",
+    "moduleResolution": "NodeNext",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "./dist",
+    "resolveJsonModule": true,
+    "rootDir": "./src",
+    "strict": true,
+    "target": "ES2022",
     "types": ["vitest/globals"]
-  }
+  },
+  "exclude": ["node_modules", "**/*.spec.ts"],
+  "include": ["src/**/*.ts"]
 }
