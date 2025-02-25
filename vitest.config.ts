@@ -4,5 +4,6 @@ export default defineConfig({
   test: {
     dir: 'src',
     include: ['**/*.test.[jt]s'],
+    globals: true,
   },
 });
