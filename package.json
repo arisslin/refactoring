@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "format": "prettier --write .",
+    "prepare": "husky",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andreas Rissling",
   "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-angular": "^19.7.1",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.2"
   },
   "type": "module"
 }
