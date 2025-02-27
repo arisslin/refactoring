@@ -1,3 +1,4 @@
 {
-  "**/*.{js,jsx,ts,tsx,json,md,css,scss,html,yml,yaml}": "npx prettier --write"
+  "*.md": ["npx prettier --write"],
+  "**/*.{js,ts,json}": ["npx prettier --write", "npx eslint --cache --fix"]
 }
