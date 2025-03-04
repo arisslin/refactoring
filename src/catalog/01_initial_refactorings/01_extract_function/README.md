@@ -38,6 +38,9 @@ const printInvoice = (invoice: Invoice): void => {
 ### After Refactoring
 
 ```ts
+const printCustomer = (invoice: Invoice) =>
+  console.log(`Customer: ${invoice.customer}`);
+
 const calculateTotal = (items: Item[]): number => {
   let totalAmount = 0;
 
@@ -48,12 +51,15 @@ const calculateTotal = (items: Item[]): number => {
   return totalAmount;
 };
 
+const printResult = (totalAmount: number) =>
+  console.log(`Total: €${totalAmount}`);
+
 const printInvoice = (invoice: Invoice): void => {
-  console.log(`Customer: ${invoice.customer}`);
+  printCustomer(invoice: Invoice);
 
   const totalAmount = calculateTotal(invoice.items);
 
-  console.log(`Total: €${totalAmount}`);
+  printResult(totalAmount);
 };
 ```
 
@@ -72,6 +78,36 @@ This refactoring technique offers multiple benefits, particularly in terms of re
 3. Replace the original block with a call to the new function.
 4. Ensure all tests pass. If necessary, adjust existing tests or create new ones to verify the extracted function.
 
-## Next Steps
+## Your Challenge
 
-Now you can try applying this refactoring yourself! The provided files include pre-written code that you can modify according to the "Extract Function" technique. Use the available tests to check your changes and ensure that your refactoring is correctly implemented.
+Now you can try applying this refactoring yourself! The provided files include pre-written code that you can modify according to the "Extract Function" technique.
+
+In the file [exercise.ts](./exercise.ts), you'll find a function called `countVowels` that counts vowels in a text. Your task is to improve this function by applying the "Extract Function" refactoring pattern.
+
+### Instructions:
+
+1. Identify logically related code blocks within the `countVowels` function.
+2. Extract each of these code blocks into its own function with a meaningful name.
+3. Replace the original code in the `countVowels` function with calls to these new functions.
+4. Make sure all tests still pass. `npm run test extract-function`
+
+### Goal:
+
+Your refactored code should:
+
+- Be more readable
+- Split the logic into smaller, specialized functions
+- Better implement the Single Responsibility Principle
+- Provide the same functionality as before
+
+Tip: Identify at least three separate responsibilities in the existing code:
+
+1. Printing the header
+2. Calculating the vowel count
+3. Printing the result
+
+Run the tests with `npm run test extract-function` to verify your refactoring was successful.
+
+### Solution
+
+After attempting this exercise, you can view a detailed solution with explanations in the [solution.ts](./solution.ts) file. The comments in that file explain how the "Extract Function" technique was applied.
