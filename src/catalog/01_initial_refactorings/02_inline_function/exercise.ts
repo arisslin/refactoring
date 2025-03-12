@@ -26,7 +26,7 @@ export type Invoice = {
   createdAt: string;
 };
 
-const getCustomerAdressFormatted = (customer: Customer) =>
+const formatCustomerAddress = (customer: Customer) =>
   `${customer.address.street},\n${customer.address.zip},\n${customer.address.city},\n${customer.address.country}`;
 
 const calcOrderTotal = (order: Order) => order.price * order.quantity;
@@ -51,14 +51,12 @@ export const createInvoice = (
     return undefined;
   }
 
-  const invoice = {
+  return {
     customerId: customer.customerId,
     name: customer.name,
-    address: getCustomerAdressFormatted(customer),
+    address: formatCustomerAddress(customer),
     orders: calcOrdersWithTotal(orders),
     total: calcTotal(orders),
     createdAt: getDateString(),
   };
-
-  return invoice;
 };

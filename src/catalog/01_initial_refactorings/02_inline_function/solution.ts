@@ -1,21 +1,7 @@
 import { Customer, Invoice, Order } from './exercise.ts';
 
-const getCustomerAdressFormatted = (customer: Customer) =>
+const formatCustomerAddress = (customer: Customer) =>
   `${customer.address.street},\n${customer.address.zip},\n${customer.address.city},\n${customer.address.country}`;
-
-const calcOrderTotal = (order: Order) => order.price * order.quantity;
-
-const addOrderTotal = (order: Order) => ({
-  ...order,
-  total: calcOrderTotal(order),
-});
-
-const calcOrdersWithTotal = (orders: Order[]) => orders.map(addOrderTotal);
-
-const calcTotal = (orders: Order[]) =>
-  orders.reduce((sum, order) => sum + order.price * order.quantity, 0);
-
-const getDateString = () => new Date().toDateString();
 
 export const createInvoice = (
   customer: Customer,
@@ -25,14 +11,15 @@ export const createInvoice = (
     return undefined;
   }
 
-  const invoice = {
+  return {
     customerId: customer.customerId,
     name: customer.name,
-    address: getCustomerAdressFormatted(customer),
-    orders: calcOrdersWithTotal(orders),
-    total: calcTotal(orders),
-    createdAt: getDateString(),
+    address: formatCustomerAddress(customer),
+    orders: orders.map((order: Order) => ({
+      ...order,
+      total: order.price * order.quantity,
+    })),
+    total: orders.reduce((sum, order) => sum + order.price * order.quantity, 0),
+    createdAt: new Date().toDateString(),
   };
-
-  return invoice;
 };
