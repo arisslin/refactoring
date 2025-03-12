@@ -4,6 +4,7 @@ import {
   Invoice,
   Order,
 } from './exercise.ts';
+import { createInvoice as solution } from './solution.ts';
 
 type FunctionToTest = (
   customer: Customer,
@@ -96,3 +97,5 @@ const tests = (functionToTest: FunctionToTest) => {
 };
 
 describe('extract function - exercise', () => tests(exercise));
+
+describe('extract function - solution ', () => tests(solution));
