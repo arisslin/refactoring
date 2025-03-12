@@ -5,5 +5,8 @@ export default defineConfig({
     dir: 'src',
     include: ['**/*.test.[jt]s'],
     globals: true,
+    coverage: {
+      include: ['src/**/*.ts'],
+    },
   },
 });

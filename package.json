@@ -5,9 +5,10 @@
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint . --max-warnings 0",
-    "lint:fix": "npm run lint --fix",
+    "lint:fix": "npm run lint -- --fix",
     "prepare": "husky",
-    "test": "vitest --config ./vitest.config.ts"
+    "test": "vitest --config ./vitest.config.ts",
+    "test:coverage": "npm run test -- --coverage"
   },
   "author": "Andreas Rissling",
   "license": "MIT",
