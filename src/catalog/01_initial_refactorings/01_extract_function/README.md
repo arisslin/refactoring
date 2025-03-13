@@ -110,4 +110,4 @@ Run the tests with `npm run test extract-function` to verify your refactoring wa
 
 ### Solution
 
-After attempting this exercise, you can view a detailed solution with explanations in the [solution.ts](./solution.ts) file. The comments in that file explain how the "Extract Function" technique was applied.
+After attempting this exercise, you can view a detailed solution with explanations in the [SOLUTION.md](./SOLUTION.md) file, and see the implementation in the [solution.ts](./solution.ts) file.
