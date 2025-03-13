@@ -20,11 +20,23 @@ This project follows the catalog from _Refactoring_ by Martin Fowler. The order 
 ## How does it work?
 
 1. Clone this repository.
-2. Choose a refactoring example.
+2. Choose a refactoring example from the catalog.
 3. Read the explanation of the refactoring technique. 
 4. Try to improve the code yourself.
 5. Use the existing unit tests to verify your changes.
 6. Compare your solution with the provided reference solution.
+
+### File Structure
+
+You will find all examples in the catalog: `src/catalog`.
+
+Each refactoring example is organized in a numbered folder (e.g., `01_extract_function`) and includes the following files:
+
+- README.md (explanation of technique, when to use, examples)
+- exercise.ts (code to refactor)
+- \*-function.test.ts (test suite)
+- solution.ts (reference implementation)
+- SOLUTION.md (detailed step-by-step explanation)
 
 ## Requirements
 
@@ -61,6 +73,12 @@ This project uses:
    ```sh
    npm test
    ```
+
+### Run a specific test
+
+```sh
+npm test -- extract-function
+```
 
 ## License and Acknowledgment
 
