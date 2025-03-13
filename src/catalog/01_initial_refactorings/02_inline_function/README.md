@@ -110,6 +110,8 @@ class SpecialDiscount extends Discount {
 
 ## Your Challenge
 
+For a step-by-step explanation of the solution, refer to the [SOLUTION.md](./SOLUTION.md) and compare it with the implementation in [solution.ts](./solution.ts).
+
 Now it's your turn! In the file [exercise.ts](./exercise.ts), you will find an implementation with a function suitable for the "Inline Function" refactoring.
 
 ### Your Task:
