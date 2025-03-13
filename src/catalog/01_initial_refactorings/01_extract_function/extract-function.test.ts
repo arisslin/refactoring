@@ -1,5 +1,5 @@
-import { countVowels as exercise } from './exercise.js';
-import { countVowels as solution } from './solution.js';
+import { countVowels as exercise } from './exercise.ts';
+import { countVowels as solution } from './solution.ts';
 
 type FunctionToTest = (text: string) => void;
 
